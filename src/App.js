@@ -1,8 +1,9 @@
 import React from "react";
+import { ListItem } from "./components/ListItem"; 
 function App() {
   return (
     <div className="App">
-    <h1>this is an app</h1>
+      <ListItem itemTitle ="sample item"></ListItem>
     </div>
   );
 }
