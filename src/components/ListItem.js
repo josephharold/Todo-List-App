@@ -15,7 +15,7 @@ const ListItem = (props)=>{
 	}
 	return(
 		<li>
-			{props.itemTitle}
+			{props.children}
 			<ButtonComplete>example</ButtonComplete>
 			<ButtonDelete></ButtonDelete>
 			<ButtonEdit></ButtonEdit>
