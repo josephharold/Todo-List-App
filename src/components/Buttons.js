@@ -8,7 +8,7 @@ import React from 'react';
 const ButtonDelete =(props)=>{
 	return(
 		<span>
-			<button onClick={()=>props.deleteItem}>Delete Item</button>
+			<button onClick={()=>props.deleteItem()}>Delete Item</button>
 		</span>
 	)			
 }

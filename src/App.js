@@ -1,5 +1,4 @@
 import React from "react";
-import { ListItem } from "./components/ListItem"; 
 import { TodoList } from "./components/TodoList";
 function App() {
   return (

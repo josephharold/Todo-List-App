@@ -12,19 +12,36 @@ const TodoList = ()=>{
 		axios
 		.get('https://jsonplaceholder.typicode.com/todos')
 		.then(response => {
-			setList(response.data)
-			console.log(list);
+			setList(response.data.filter((element, index)=>{
+				return element.userId ===1;
+			}))
 		})
 		.catch(err => console.log(err));
 	}, []);
-	const display =	list.filter(indx=>{return indx.userId === 1}).map(indx=>{
-		return <ListItem>{indx.title}|| {indx.completed}</ListItem>		
+
+	const deleteItem = (userId,listItemId)=>{
+		console.log(userId, listItemId);
+		let dummyList = [...list];
+		setList(dummyList.filter(elem=> {return !(elem.userId==userId && elem.id==listItemId)}));
 	}
-	)
+	const editItem = ()=>{
+		
+	}
+
 	return(
 		<React.Fragment>
 			<h1>this is a react fragment</h1>
-			{display}
+			{
+				list.map(element=>{
+					return <ListItem 
+								key = {element.title + element.userId + element.completed}
+								deleteItem = {()=> deleteItem(element.userId, element.id)}
+							>
+								{element.title}|| {element.completed}
+							</ListItem>		
+					}
+				)
+			}
 		</React.Fragment>
 	)
 }
