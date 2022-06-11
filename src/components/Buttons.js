@@ -16,7 +16,7 @@ const ButtonDelete =(props)=>{
 const ButtonComplete = (props)=>{
 	return(
 		<span>
-			<button onClick={()=> props.completeItem}>{props.children}</button>
+			<button onClick={()=> props.toggleComplete()}>{props.children}</button>
 		</span>
 	)
 }
@@ -24,7 +24,7 @@ const ButtonComplete = (props)=>{
 const ButtonEdit = (props)=>{
 	return(
 		<span>
-			<button onClick={()=> props.editItem}>Complete Item</button>
+			<button onClick={()=> props.editItem}>Edit</button>
 		</span>
 	)
 }
