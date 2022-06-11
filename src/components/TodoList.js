@@ -19,8 +19,10 @@ const TodoList = ()=>{
 		})
 		.catch(setList([]));
 	}, []);
-	const toggleComplete = (completed)=>{
-		// replace code 
+	const toggleComplete = (title, userId, id, completed, index)=>{
+		let dummyList = [...list];		
+		dummyList[index] = {title: title, userId: userId, id: id, completed: !completed}
+		setList(dummyList);
 	}
 	const deleteItem = (userId,listItemId)=>{
 		let dummyList = [...list];
@@ -44,7 +46,8 @@ const TodoList = ()=>{
 					return <ListItem 
 								key = {element.title + element.userId + element.completed}
 								deleteItem = {()=> deleteItem(element.userId, element.id)}
-								toggleComplete = {()=> toggleComplete(element.userId, element.id, element.completed, index)}
+								toggleComplete = {()=> toggleComplete(element.title, element.userId, element.id, element.completed, index)}
+								isComplete = {element.completed}
 							>
 								{element.title}|| {element.completed}
 							</ListItem>		
