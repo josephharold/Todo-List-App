@@ -1,0 +1,14 @@
+.todoTitle {
+	width: 400px;
+	overflow-x:hidden;
+}
+
+.todoEditInput{
+	width: 400px;
+}
+
+.todo{
+	border-top: 1px solid rgb(177, 177, 177);
+	border-bottom: 1px solid rgb(177, 177, 177);
+	max-width:min-content;
+}

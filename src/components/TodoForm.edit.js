@@ -16,7 +16,7 @@ export const TodoEditForm = (props)=>{
 
 	return(
 		<React.Fragment>
-			<input type="text" placeholder={props.todoTitle} onChange={(e)=>handleChange(e)} onKeyDown={(e)=>handleKeyPress(e)}/>
+			<input type="text" class="todoEditInput"placeholder={props.todoTitle} onChange={(e)=>handleChange(e)} onKeyDown={(e)=>handleKeyPress(e)}/>
 		</React.Fragment>
 	)
 }

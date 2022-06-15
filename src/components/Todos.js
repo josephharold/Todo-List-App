@@ -6,7 +6,7 @@ export const Todos = (props)=>{
 
 	let list = props.todos.map((e)=>{
 		return (
-			<div key= {e.id}>
+			<div class="todo container d-flex align-items-center justify-content-center mb-1 mt-1"key= {e.id}>
 				<TodoBody
 					handleEdit = {props.handleEdit}
 					todoId={e.id}
@@ -16,8 +16,8 @@ export const Todos = (props)=>{
 					edit = {edit}
 					completeTodo ={props.completeTodo}
 				/>
-				<button onClick = {()=>setEdit(e.id)}>edit</button>
-				<button onClick={()=>props.handleDelete(e.id)}>delete</button>
+				<button class="btn btn-primary m-1" onClick = {()=>setEdit(e.id)}>edit</button>
+				<button class="btn btn-secondary m-1" onClick={()=>props.handleDelete(e.id)}>delete</button>
 			</div>
 
 		)})

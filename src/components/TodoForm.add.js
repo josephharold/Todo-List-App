@@ -18,7 +18,9 @@ export const TodoAddForm = (props)=>{
 
 	return(
 		<React.Fragment>
-			<input type="text" placeholder='todo' onChange={(e)=>handleChange(e)} onKeyDown={(e)=>handleKeyPress(e)}/>
+			<div class="container d-flex justify-content-center">
+				<input class="todoAddInput"type="text" placeholder='todo' onChange={(e)=>handleChange(e)} onKeyDown={(e)=>handleKeyPress(e)}/>
+			</div>
 		</React.Fragment>
 	)
 }

@@ -39,7 +39,9 @@ export const TodoList = ()=>{
 	}
 	return(
 		<React.Fragment>
-			<h1>TodoList App</h1>
+			<div class="d-flex justify-content-center">
+				<h1>TodoList App</h1>
+			</div>	
 			<TodoAddForm addTodo = {addTodo}/>
 			<Todos 
 				todos={todos}
